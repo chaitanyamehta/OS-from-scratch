@@ -1,8 +1,6 @@
 #ifndef PRINT_H
 #define PRINT_H
 
-#include "stdint.h"
-
 #define VIDEO_MEMORY 0xB8000
 #define MAX_ROWS 25
 #define MAX_COLUMNS 80
