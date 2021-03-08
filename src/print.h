@@ -16,7 +16,7 @@
 void print_char(char ch);
 
 // Output a null-terminated ASCII string
-void print(char *str);
+void print(const char *str);
 
 // Clear screen
 void cls();

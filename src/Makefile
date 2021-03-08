@@ -1,5 +1,6 @@
-CODE = $(wildcard *.c)
-OBJ = boot.o $(CODE:.c=.o)
+S_FILES = $(wildcard *.s)
+C_FILES = $(wildcard *.c)
+OBJ = $(S_FILES:.s=.o) $(C_FILES:.c=.o)
 
 CFLAGS = -m32 -nostdlib -nostdinc -fno-builtin -fno-stack-protector
 LDFLAGS = -m elf_i386 -Tlink.ld

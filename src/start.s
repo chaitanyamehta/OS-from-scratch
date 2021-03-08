@@ -1,5 +1,5 @@
 ;
-; boot.s -- Kernel start location. Also defines multiboot header.
+; start.s -- Kernel start location. Also defines multiboot header.
 ;
 
 MBOOT_PAGE_ALIGN    equ 1<<0    ; Load kernel and modules on a page boundary
@@ -43,3 +43,4 @@ start:
     jmp $                       ; Enter an infinite loop, to stop the processor
                                 ; executing whatever rubbish is in the memory
                                 ; after our kernel!
+
