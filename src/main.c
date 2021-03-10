@@ -1,15 +1,18 @@
+#include "gdt.h"
 #include "interrupt.h"
 #include "print.h"
+#include "keyboard.h"
+#include "timer.h"
 
-int main(struct multiboot *mboot_ptr)
+int main()
 {
-	idt_install();
-	isr_install();
-	irq_install();
+	init_gdt();
+	init_idt();
 	
 	cls();
-	print("Hello, world!\n");
-	asm volatile ("int $0x3");
+	init_timer();
+	init_keyboard();
+	asm volatile ("sti");
 	
-    return 0xDEADBEEF;
+	return 0xDEADBEEF;
 }
