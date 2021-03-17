@@ -1,8 +1,8 @@
-
+phys = 0x00001000;
 ENTRY(start)
 SECTIONS
 {
-	.text 0x100000 :
+	.text phys :
 	{
 		code = .; _code = .; __code = .;
 		*(.text)
