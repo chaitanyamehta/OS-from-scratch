@@ -95,7 +95,7 @@ static void move_cursor()
 	outb(VGA_CTRL_REG, 14);						// Setting high cursor byte
 	outb(VGA_DATA_REG, cursor_location >> 8);	// Send high cursor byte
 	outb(VGA_CTRL_REG, 15);						// Setting low cursor byte
-	outb(VGA_DATA_REG, cursor_location);			// Send low cursor byte
+	outb(VGA_DATA_REG, cursor_location);		// Send low cursor byte
 }
 
 static void scroll()
